@@ -1,0 +1,60 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+    <div class="flb">
+        <div class="Aligner-item Aligner-item--top"></div>
+        <img src="../../assets/captura.PNG" alt="">
+        <div class="Aligner-item Aligner-item--bottom"></div>
+    </div>
+</div>
+
+<ion-header>
+    <ion-toolbar color="secondary">
+        <ion-title text-center slot="start">Iniciar sesión</ion-title>
+        <ion-avatar slot="end" class="avatar">
+            <img src="../../assets/pruebaTP3.PNG">
+        </ion-avatar>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding scroll="false">
+
+    <ion-item lines="none" class="campos">
+        <ion-input type="text" name="correo" [(ngModel)]="correo" placeholder="Correo electrónico" (ionFocus)='listaCorreos()' required></ion-input>
+
+    </ion-item>
+    <ion-item lines="none" class="campos">
+        <ion-input [type]="passwordType" name="contrasena" placeholder="Contraseña" [(ngModel)]="clave" required></ion-input>
+        <ion-icon slot="end" [name]="eyeType" color="white" (click)="tooglePassword()" style="zoom:1.2;"></ion-icon>
+    </ion-item>
+    <ion-item lines="none" class="recordarme">
+        <ion-label>Recordarme</ion-label>
+        <ion-checkbox slot="start"></ion-checkbox>
+    </ion-item>
+    <div class="inicio">
+        <div class="cajaImagen">
+            <img class="icon" src="../../assets/alarma.png" alt=" ">
+        </div>
+    </div>
+    <div class="fin">
+        <ion-chip>
+            <ion-label color="primary" (click)="ingresoAdmin()">Administrador</ion-label>
+        </ion-chip>
+        <ion-chip>
+            <ion-label color="danger" (click)="ingresoUsuario()">Usuario</ion-label>
+        </ion-chip>
+        <ion-chip>
+            <ion-label color="dark" (click)="ingresoInvitado()">Invitado</ion-label>
+        </ion-chip>
+        <ion-chip>
+            <ion-label color="success" (click)="ingresoTester()">Tester</ion-label>
+        </ion-chip>
+        <ion-chip>
+            <ion-label color="warning" (click)="ingresoAnonimo()">Anónimo</ion-label>
+        </ion-chip>
+        <ion-button class="boton" expand="block " color="secondary" *ngIf="!cargando" (click)="onLogin() ">Ingresar</ion-button>
+        <ion-button class="boton" expand="block" color="danger" *ngIf="cargando">
+            <ion-spinner name="crescent"></ion-spinner>
+            Cargando...</ion-button>
+        <ion-button class="boton " expand="block " color="primary" disabled routerLink="/home ">Inicio</ion-button>
+    </div>
+
+</ion-content>

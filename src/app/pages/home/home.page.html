@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar color="secondary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="login"></ion-back-button>
+        </ion-buttons>
+        <ion-title slot="start">
+            Alarma Antirrobo
+        </ion-title>
+        <ion-avatar slot="end" class="avatar">
+            <img src="../../assets/pruebaTP3.PNG">
+        </ion-avatar>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <div class="contenedor">
+        <img src="../../../assets/pruebaTP3.PNG" alt="">
+    </div>
+    <div class="mid">
+        <label class="rocker">
+          <input type="checkbox" [(ngModel)]="activo"(change)="cambioEstado()">
+          <span class="switch-left">I</span>
+          <span class="switch-right">O</span>
+        </label>
+    </div>
+
+</ion-content>
