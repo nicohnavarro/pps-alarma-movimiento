@@ -18,11 +18,13 @@
 <ion-content padding scroll="false">
 
     <ion-item lines="none" class="campos">
-        <ion-input type="text" name="correo" [(ngModel)]="correo" placeholder="Correo electrónico" (ionFocus)='listaCorreos()' required></ion-input>
+        <ion-input type="text" name="correo" [(ngModel)]="correo" placeholder="Correo electrónico"
+            (ionFocus)='listaCorreos()' required></ion-input>
 
     </ion-item>
     <ion-item lines="none" class="campos">
-        <ion-input [type]="passwordType" name="contrasena" placeholder="Contraseña" [(ngModel)]="clave" required></ion-input>
+        <ion-input [type]="passwordType" name="contrasena" placeholder="Contraseña" [(ngModel)]="clave" required>
+        </ion-input>
         <ion-icon slot="end" [name]="eyeType" color="white" (click)="tooglePassword()" style="zoom:1.2;"></ion-icon>
     </ion-item>
     <ion-item lines="none" class="recordarme">
@@ -50,11 +52,15 @@
         <ion-chip>
             <ion-label color="warning" (click)="ingresoAnonimo()">Anónimo</ion-label>
         </ion-chip>
-        <ion-button class="boton" expand="block " color="secondary" *ngIf="!cargando" (click)="onLogin() ">Ingresar</ion-button>
+
+    </div>
+    <div class="final">
+        <ion-button class="boton" expand="block " color="secondary" *ngIf="!cargando" (click)="onLogin() ">Ingresar
+        </ion-button>
         <ion-button class="boton" expand="block" color="danger" *ngIf="cargando">
             <ion-spinner name="crescent"></ion-spinner>
-            Cargando...</ion-button>
+            Cargando...
+        </ion-button>
         <ion-button class="boton " expand="block " color="primary" disabled routerLink="/home ">Inicio</ion-button>
     </div>
-
 </ion-content>

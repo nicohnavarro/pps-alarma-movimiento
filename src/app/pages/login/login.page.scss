@@ -24,7 +24,12 @@ ion-content {
 ion-alert {
     --background: #263a7a!important;
 }
-
+ion-chip{
+    border-radius: 25px;
+    box-shadow: 8px 11px 12px -7px #080808;
+    font-weight: 600;
+    font-size: 17px;
+}
 .inicio {
     margin: 1rem;
     background-color: #263a7a;
@@ -34,6 +39,9 @@ ion-alert {
     margin: 0;
     padding: 0;
     background-color: #263a7a;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .boton {

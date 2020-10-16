@@ -24,3 +24,33 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+ .alert-wrapper {
+    background-color:#263A7A!important;
+    border-radius: 10px;
+  }
+  .alert-title.sc-ion-alert-md{
+      color:white;
+  }
+ .alert-message {
+    color: #ff7f4f!important;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .alert-input.sc-ion-alert-md{
+    color:white;
+  }
+
+  .alert-button-inner.sc-ion-alert-md {
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+  }
+  .alert-button.sc-ion-alert-md {
+    background-color: rgb(241, 28, 28);
+    font-family: "Montserrat", sans-serif;
+    border-radius: 25px;
+    box-shadow: 8px 11px 12px -7px #080808;
+  }

@@ -50,12 +50,12 @@ export class HomePage implements OnInit {
     },
       err => this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.CAMERA)
     );
-     this.audioIzq.src = '../../../assets/sonidos/curiosa.mp3';
-     this.audioDer.src = '../../../assets/sonidos/tujermu.mp3';
-     this.audioAcostado.src = '../../../assets/sonidos/quehace.mp3';
-     this.audioVer.src = '../../../assets/sonidos/sacamanoahi.mp3';
-     this.sonidoClick.src = '../../../assets/sonidos/dejaesoahi.mp3';
-     this.warning.src='../../../assets/sonidos/pito.mp3';
+     this.audioIzq.src = '../../../assets/sonidos/homero.mp3';
+     this.audioDer.src = '../../../assets/sonidos/homero3.mp3';
+     this.audioAcostado.src = '../../../assets/sonidos/homero2.mp3';
+     this.audioVer.src = '../../../assets/sonidos/alarma.mp3';
+     this.sonidoClick.src = '../../../assets/sonidos/traba.mp3';
+     this.warning.src='../../../assets/sonidos/homero.mp3';
      this.sonidoClick.load();
 
   }
